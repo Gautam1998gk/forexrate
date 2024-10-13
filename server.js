@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 //scraping task at 6 AM every day
-scheduleJob('0 * * * *', async () => {
+scheduleJob('* 6 * * *', async () => {
   await scrapeForexRates();
   console.log('Forex rate data saved successfully.');
 });
